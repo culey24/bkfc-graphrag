@@ -10,6 +10,7 @@ dependencies = [
     "google-genai>=1.59.0",
     "neo4j>=6.1.0",
     "ollama>=0.6.1",
+    "pandas>=2.3.3",
     "pyneo4j>=0.0.0",
     "python-dotenv>=1.2.1",
     "requests>=2.32.5",
