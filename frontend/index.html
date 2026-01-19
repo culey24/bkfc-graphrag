@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D KG RAG - Hand Control Ready</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="//unpkg.com/3d-force-graph"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+</head>
+<body>
+
+    <div id="ui-layer">
+        <div id="chat-container">
+            <header>
+                <span class="status-dot"></span>
+                <h1>GraphRAG Assistant</h1>
+            </header>
+            
+            <div id="ai-response-area">
+                <p id="ai-text">Chào <b>culey</b>, hãy đặt câu hỏi để tui tìm kiếm trong Knowledge Graph nhé!</p>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="search-input" placeholder="Nhập câu hỏi tại đây..." autocomplete="off">
+                <button id="ask-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="camera-preview">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="output_canvas"></canvas>
+            <div class="camera-label">Hand Control Status: <span id="hand-status">Off</span></div>
+        </div>
+    </div>
+
+    <div id="3d-graph"></div>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/ui_controls.js"></script>
+</body>
+</html>

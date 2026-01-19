@@ -1,0 +1,19 @@
+[project]
+name = "graphrag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "faiss-cpu>=1.13.2",
+    "fastapi>=0.128.0",
+    "google-genai>=1.59.0",
+    "neo4j>=6.1.0",
+    "ollama>=0.6.1",
+    "pyneo4j>=0.0.0",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "sentence-transformers>=5.2.0",
+    "torch>=2.9.1",
+    "uvicorn>=0.40.0",
+]
